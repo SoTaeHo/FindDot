@@ -55,8 +55,9 @@ def calib_camera_from_chessboard(images, board_pattern, board_cellsize, K=None, 
     return cv.calibrateCamera(obj_points, img_points, gray.shape[::-1], K, dist_coeff, flags=calib_flags)
 
 if __name__ == '__main__':
-    video_file = './chessboard.avi'
-    board_pattern = (10, 7)
+    # video_file = './chessboard.avi'
+    video_file = './mycheckerboard.mp4'
+    board_pattern = (9, 6) # change pattern for apply my video
     board_cellsize = 0.025
 
     img_select = select_img_from_video(video_file, board_pattern)
